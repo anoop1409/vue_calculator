@@ -1,5 +1,7 @@
 <template>
-  <Frame msg="Welcome to Your Vue.js + TypeScript App" />
+  <div>
+    <Frame msg="Welcome to Your Vue.js + TypeScript App" />
+  </div>
 </template>
 
 <script lang="ts">
