@@ -1,6 +1,6 @@
 <template>
   <button class="number-button">
-    9
+    {{digit}}
   </button>
 
 </template>
@@ -10,7 +10,7 @@ import { Options, Vue } from "vue-class-component";
 
 @Options({
   props: {
-    msg: String
+    digit: Number
   }
 })
 export default class Button extends Vue {

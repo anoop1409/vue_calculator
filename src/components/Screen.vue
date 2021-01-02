@@ -1,6 +1,6 @@
 <template>
   <div class="screen">
-    9876543210
+    1234567890
   </div>
 
 </template>

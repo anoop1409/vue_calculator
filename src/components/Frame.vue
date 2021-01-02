@@ -4,7 +4,9 @@
     <div class="frame">
       <div class="screen">
         <Screen />
-        <Button />
+        <div class="digits">
+          <Button :digit=item v-for="item in digits" :key="item" />
+        </div>
       </div>
     </div>
   </div>
@@ -17,6 +19,13 @@ import Screen from "./Screen.vue";
 import Button from "./Button.vue";
 
 @Options({
+  data: function(){
+    return{
+      digits: [
+        7,8,9,4,5,6,1,2,3,0
+      ]
+    }
+  },
   props: {
     msg: String
   },
@@ -38,4 +47,7 @@ export default class Frame extends Vue {
   height: 600px
   background-color: brown
   border: 1px solid black
+
+.digits
+  width: 75% 
 </style>
