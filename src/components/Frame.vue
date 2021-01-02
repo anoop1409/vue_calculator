@@ -4,6 +4,7 @@
     <div class="frame">
       <div class="screen">
         <Screen />
+        <Button />
       </div>
     </div>
   </div>
@@ -13,13 +14,15 @@
 <script lang="ts">
 import { Options, Vue } from "vue-class-component";
 import Screen from "./Screen.vue";
+import Button from "./Button.vue";
 
 @Options({
   props: {
     msg: String
   },
   components: {
-    Screen
+    Screen,
+    Button
   }
 })
 export default class Frame extends Vue {
