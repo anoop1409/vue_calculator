@@ -20,8 +20,8 @@ export default class Button extends Vue {
 
 <style scoped lang="sass">
 .number-button
-  width: 125px
-  height: 125px
-  font-size: 60px
+  width: 80px
+  height: 50px
+  font-size: 30px
   float: left
 </style>

@@ -7,6 +7,9 @@
         <div class="digits">
           <Button :digit=item v-for="item in digits" :key="item" />
         </div>
+        <div class="operators">
+          <Button :digit=item v-for="item in operators" :key="item" />
+        </div>
       </div>
     </div>
   </div>
@@ -23,6 +26,9 @@ import Button from "./Button.vue";
     return{
       digits: [
         7,8,9,4,5,6,1,2,3,0
+      ],
+      operators: [
+        "/", "X", "-", "+"
       ]
     }
   },
@@ -43,11 +49,16 @@ export default class Frame extends Vue {
 <style scoped lang="sass">
 
 .frame
-  width: 500px
-  height: 600px
+  width: 320px
+  height: 500px
   background-color: brown
   border: 1px solid black
 
 .digits
   width: 75% 
+  float: left
+
+.operators
+  width: 25%
+  float: left
 </style>

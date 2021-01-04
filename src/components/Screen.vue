@@ -24,6 +24,6 @@ export default class Screen extends Vue {
   height: 60px
   border-bottom: 1px solid black
   background-color: white
-  font-size: 55px
+  font-size: 50px
   text-align: right
 </style>
