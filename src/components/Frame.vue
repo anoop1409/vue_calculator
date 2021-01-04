@@ -3,9 +3,9 @@
     <h1>Calculator</h1>
     <div class="frame">
       <div class="screen">
-        <Screen />
+        <Screen :value="value" />
         <div class="digits">
-          <Button :digit=item v-for="item in digits" :key="item" />
+          <Button :digit=item v-for="item in digits" :key="item" @update-data="updateData" />
         </div>
         <div class="operators">
           <Button :digit=item v-for="item in operators" :key="item" />
@@ -29,7 +29,8 @@ import Button from "./Button.vue";
       ],
       operators: [
         "/", "X", "-", "+"
-      ]
+      ],
+      value: 0,
     }
   },
   props: {
@@ -38,6 +39,11 @@ import Button from "./Button.vue";
   components: {
     Screen,
     Button
+  },
+  methods:{
+    updateData: function(value: number){
+      this.value = value
+    }
   }
 })
 export default class Frame extends Vue {

@@ -1,6 +1,6 @@
 <template>
   <div class="screen">
-    1234567890
+    {{value}}
   </div>
 
 </template>
@@ -10,7 +10,7 @@ import { Options, Vue } from "vue-class-component";
 
 @Options({
   props: {
-    msg: String
+    value: String
   }
 })
 export default class Screen extends Vue {

@@ -1,5 +1,5 @@
 <template>
-  <button class="number-button">
+  <button class="number-button" @click="buttonPressed(digit)">
     {{digit}}
   </button>
 
@@ -11,6 +11,11 @@ import { Options, Vue } from "vue-class-component";
 @Options({
   props: {
     digit: Number
+  },
+  methods:{
+    buttonPressed: function(value: number){
+      this.$emit('update-data', value)
+    }
   }
 })
 export default class Button extends Vue {
